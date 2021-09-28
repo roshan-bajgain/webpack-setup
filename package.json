@@ -1,0 +1,37 @@
+{
+  "name": "webpack-setup",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "locally": "^0.2.1",
+    "lodash": "^4.17.21",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "csv-loader": "^3.0.3",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^3.3.0",
+    "webpack-dev-middleware": "^5.2.1",
+    "xml-loader": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "server": "node server.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshan-bajgain/webpack-setup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshan-bajgain/webpack-setup/issues"
+  },
+  "homepage": "https://github.com/roshan-bajgain/webpack-setup#readme"
+}
