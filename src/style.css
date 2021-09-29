@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(221, 217, 217);
+}
+
+.tap {
+  background-color: white;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.main {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input,
+button {
+  border-style: hidden;
+  background-color: transparent;
+  color: grey;
+  font-style: italic;
+  outline: none;
+}
+
+.clear {
+  text-align: center;
+  color: grey;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.task {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 0;
+}
+
+.wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.box {
+  margin-left: -20px;
+  font-size: 20px;
+}
+
+.m-i {
+  margin-right: 17px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.m-input {
+  margin: 0 0 0 25px;
+}
+
+.tap ul {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .tap {
+    margin: 40px auto;
+    max-width: 600px;
+  }
+}
