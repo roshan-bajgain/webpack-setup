@@ -11,24 +11,24 @@ ul {
 }
 
 body {
-    background-color: rgb(221, 217, 217);
-  }
-  
+  background-color: rgb(221, 217, 217);
+}
 
-  
+
+
 .tap {
-    background-color: white;
-    box-shadow: 10px 10px 10px grey;
-  }
-  
-  .main {
-    border-bottom: 1px solid grey; 
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
+  background-color: white;
+  box-shadow: 10px 10px 10px grey;
+}
 
-  input,
+.main {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input,
 button {
   border-style: hidden;
   background-color: transparent;
@@ -38,10 +38,10 @@ button {
 }
 
 .clear {
-    text-align: center;
-    color: grey;
-    padding: 20px 0;
-    width: 100%;
+  text-align: center;
+  color: grey;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .task {
@@ -51,6 +51,7 @@ button {
   width: 100%;
   padding: 14px 0;
 }
+
 .wrapper {
   display: flex;
   gap: 8px;
@@ -80,6 +81,4 @@ button {
     margin: 40px auto;
     max-width: 600px;
   }
-  
 }
-

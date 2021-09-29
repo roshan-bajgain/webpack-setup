@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Structure</title>
-    <script
-    src="https://kit.fontawesome.com/6330da452d.js"
-    crossorigin="anonymous"
-  ></script>
+    <script src="https://kit.fontawesome.com/6330da452d.js" crossorigin="anonymous"></script>
 <script defer src="main.js"></script></head>
+
 <body>
-    <div id="tap">
-        <h3 class="main">Today's To Do<i class="fas fa-sync-alt"></i></h3>
-        <form action="submit" class="main new-data">
-            <form action="submit" class="main new-data">
+    <div class="tap-wrapper">
+        <div class="tap">
+            <h3 class="main">Today's To Do<i class="fas fa-sync-alt"></i></h3>
+            <div class="main new-data">
                 <input class="add-bar" type="text" placeholder="Add to your list">
-                <button class="enter"><i class="fas fa-level-down-alt"></i>
+                <button type="button" class="enter"><i class="fas fa-level-down-alt fa-rotate-90"></i>
                 </button>
-        </form>
+            </div>    
             <ul class="list-container">
+               
+               
             </ul>
-        <p class="clear"><span class="cursor">Clear all completed</span></p>
+            <p class="clear"><span class="cursor">Clear all completed</span></p>
+        </div>
     </div>
 </body>
+
 </html>
