@@ -6,6 +6,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     static: './dist',
+    watchFiles: ['src/**/*']
   },
   plugins: [
     new HtmlWebpackPlugin({

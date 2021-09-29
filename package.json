@@ -25,6 +25,7 @@
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0",
     "webpack-dev-middleware": "^5.2.1",
+    "webpack-dev-server": "^4.3.0",
     "xml-loader": "^1.2.1"
   },
   "scripts": {
