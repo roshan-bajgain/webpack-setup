@@ -1,5 +1,5 @@
 import './style.css';
-import { setCompleted, saveData} from './function.js';
+import { setCompleted } from './function.js';
 
 const container = document.querySelector('.list-container');
 
@@ -29,9 +29,8 @@ let todoList = [
   },
 ];
 
-
 const storedData = JSON.parse(localStorage.getItem('todos'));
-if(storedData) {
+if (storedData) {
   todoList = storedData;
 }
 
@@ -50,10 +49,9 @@ const display = () => {
     container.innerHTML += containerItems;
   });
 
-
   const boxes = document.querySelectorAll('.box');
-  
-  boxes.forEach( box => {
+
+  boxes.forEach((box) => {
     box.addEventListener('change', (e) => {
       setCompleted(todoList, box);
     });
