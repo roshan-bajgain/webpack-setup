@@ -1,7 +1,26 @@
 import './style.css';
+import { taskComp, save } from './function.js';
 
 const container = document.querySelector('.list-container');
-const todoList = [
+
+// let List = [];
+
+// const getData = () => {
+//   const data = localStorage.getItem('list');
+//   if (data != null) {
+//     List = JSON.parse(data);
+//   } else {
+//     List = [];
+//   }
+//   return List;
+// };
+
+// const saveData = (List) => {
+//   List.sort((a, b) => a.index - b.index);
+//   localStorage.setItem('todoList', JSON.stringify(List));
+// };
+
+let todoList = [
   {
     index: 0,
     description: 'Wash the dishes',
@@ -40,6 +59,13 @@ const display = () => {
     </div>
     <hr>`;
     container.innerHTML += containerItems;
+    
+    const box = document.querySelector('.box');
+    
+    box.addEventListener('change', (e) => {
+      setCompleted(e, todoList, id, box);
+    });
+
   });
 };
 display();
