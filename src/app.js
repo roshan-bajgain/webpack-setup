@@ -1,24 +1,7 @@
 import './style.css';
-import { taskComp, save } from './function.js';
+import { setCompleted, saveData} from './function.js';
 
 const container = document.querySelector('.list-container');
-
-// let List = [];
-
-// const getData = () => {
-//   const data = localStorage.getItem('list');
-//   if (data != null) {
-//     List = JSON.parse(data);
-//   } else {
-//     List = [];
-//   }
-//   return List;
-// };
-
-// const saveData = (List) => {
-//   List.sort((a, b) => a.index - b.index);
-//   localStorage.setItem('todoList', JSON.stringify(List));
-// };
 
 let todoList = [
   {
@@ -46,12 +29,18 @@ let todoList = [
   },
 ];
 
+
+const storedData = JSON.parse(localStorage.getItem('todos'));
+if(storedData) {
+  todoList = storedData;
+}
+
 const display = () => {
   todoList.forEach((item) => {
     const containerItems = `
     <div class="task">
     <div class="wrapper">
-        <input type="checkbox" name="" class="box m-input" data-id=${item.index} ${item.completed ? 'checked' : ''}>
+        <input type="checkbox" name="" id="boxes" class="box m-input" data-id=${item.index} ${item.completed ? 'checked' : ''}>
         <input type="text" name="" data-id="${item.index}" value="${item.description}">
     </div>
         <i id="ellipse" class="fas fa-ellipsis-v m-i"></i>
@@ -59,13 +48,16 @@ const display = () => {
     </div>
     <hr>`;
     container.innerHTML += containerItems;
-    
-    const box = document.querySelector('.box');
-    
-    box.addEventListener('change', (e) => {
-      setCompleted(e, todoList, id, box);
-    });
+  });
 
+
+  const boxes = document.querySelectorAll('.box');
+  
+  boxes.forEach( box => {
+    box.addEventListener('change', (e) => {
+      setCompleted(todoList, box);
+    });
   });
 };
+
 display();
