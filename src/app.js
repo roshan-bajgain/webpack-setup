@@ -52,7 +52,7 @@ const display = () => {
   const boxes = document.querySelectorAll('.box');
 
   boxes.forEach((box) => {
-    box.addEventListener('change', (e) => {
+    box.addEventListener('change', () => {
       setCompleted(todoList, box);
     });
   });

@@ -1,3 +1,7 @@
+export const saveData = (list) => {
+  list.sort((a, b) => a.index - b.index);
+  localStorage.setItem('todos', JSON.stringify(list));
+};
 export const setCompleted = (todoList, box) => {
   const { id } = box.dataset;
   const { checked } = box;
@@ -7,11 +11,6 @@ export const setCompleted = (todoList, box) => {
   element.completed = checked;
 
   saveData(todoList);
- item.completed = !(item.complted);
- return item;
-};
-
-export const saveData = (list) => {
-  list.sort((a, b) => a.index - b.index);
-  localStorage.setItem('todos', JSON.stringify(list));
+  // item.completed = !(item.complted);
+  // return item;
 };
