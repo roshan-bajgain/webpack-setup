@@ -43,7 +43,7 @@ button {
 }
 
 .task {
-  font-size: 20px;
+  font-size: 19px;
   display: flex;
   justify-content: space-between;
   width: 100%;
