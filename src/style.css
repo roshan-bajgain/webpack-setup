@@ -21,7 +21,7 @@ body {
 
 .main {
   border-bottom: 1px solid grey;
-  padding: 20px;
+  padding: 21px;
   display: flex;
   justify-content: space-between;
 }
