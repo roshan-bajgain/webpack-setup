@@ -21,7 +21,7 @@ body {
 
 .main {
   border-bottom: 1px solid grey;
-  padding: 20px;
+  padding: 21px;
   display: flex;
   justify-content: space-between;
 }
@@ -43,7 +43,7 @@ button {
 }
 
 .task {
-  font-size: 19px;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -76,7 +76,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .tap {
-    margin: 40px auto;
+    margin: 41px auto;
     max-width: 600px;
   }
 }
