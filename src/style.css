@@ -68,6 +68,13 @@ button {
 .m-input {
   margin: 3px 0 0 25px;
 }
+#deletebtn {
+  display: none;
+}
+.show-deletebtn{
+  display: block;
+}
+
 
 .tap ul {
   display: flex;

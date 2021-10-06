@@ -1,8 +1,9 @@
 
 export const inputBox = document.querySelector('#add-bar');
 export const addBtn = document.querySelector('.enter');
-export const todolist = document.querySelector('.list-container');
-  export let listArr = JSON.parse(localStorage.getItem('todos')) || [];
+
+
+export let listArr = JSON.parse(localStorage.getItem('todos')) || [];
 export const createlocalstorage = (array) => {
     const localStorageObject = {
       description: inputBox.value,
@@ -28,3 +29,8 @@ export const createlocalstorage = (array) => {
     todolist.innerHTML = newlitag;
     inputBox.Value = '';
 }
+
+
+
+
+
