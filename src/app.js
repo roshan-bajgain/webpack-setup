@@ -15,7 +15,7 @@ import { inputBox, showTask, createlocalstorage, addBtn, listArr } from './scrip
           <input readonly type="text" name="" data-id="${item.index}" value="${item.description}">
       </div>
           <i id="ellipse" class="fas fa-ellipsis-v m-i"></i>
-          <i id="deletebtn" class="fas fa-trash"></i>
+         <i id="deletebtn" class="fas fa-trash"></i>
           
       </div>
       <hr>`;
@@ -40,7 +40,15 @@ import { inputBox, showTask, createlocalstorage, addBtn, listArr } from './scrip
      display(listArr);
 
   const task = document.querySelectorAll('.task');
- 
+
+  function deleteTask(idx) {
+    const storage = JSON.parse(localStorage.getItem("todos"));
+    const savedata = storage.filter((value, index) => index !== idx);
+    localStorage.setItem('todos', JSON.stringify(savedata));
+    window.location.reload();
+  };
+
+
   task.forEach((element, index) => {
     const el = element.childNodes[3];
     const deletebtn = element.childNodes[5];
@@ -48,5 +56,12 @@ import { inputBox, showTask, createlocalstorage, addBtn, listArr } from './scrip
       deletebtn.style.display = 'block';
       el.style.display = 'none';
     })
+    deletebtn.addEventListener('click',()=>{
+      deleteTask(index);
+    })
+  
+
   });
+
+  
 

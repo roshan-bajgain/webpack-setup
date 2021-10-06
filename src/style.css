@@ -70,6 +70,7 @@ button {
 }
 #deletebtn {
   display: none;
+  padding: 0 13px;
 }
 .show-deletebtn{
   display: block;
