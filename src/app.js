@@ -12,7 +12,7 @@ import { inputBox, showTask, createlocalstorage, addBtn, listArr } from './scrip
       <div class="task">
       <div class="wrapper">
           <input type="checkbox" name="" id="boxes" class="box m-input" data-id=${item.index} ${item.completed ? 'checked' : ''}>
-          <input readonly type="text" name="" data-id="${item.index}" value="${item.description}">
+          <input type="text" name="" data-id="${item.index}" value="${item.description}">
       </div>
           <i id="ellipse" class="fas fa-ellipsis-v m-i"></i>
          <i id="deletebtn" class="fas fa-trash"></i>
