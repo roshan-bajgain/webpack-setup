@@ -61,12 +61,21 @@ button {
 }
 
 .m-i {
-  margin-right: 17px;
+  margin-right: 18px;
   color: rgba(0, 0, 0, 0.5);
 }
 
 .m-input {
-  margin: 0 0 0 25px;
+  margin: 3px 0 0 25px;
+}
+
+#deletebtn {
+  display: none;
+  padding: 0 13px;
+}
+
+.show-deletebtn {
+  display: block;
 }
 
 .tap ul {
