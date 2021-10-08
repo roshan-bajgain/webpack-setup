@@ -14,23 +14,6 @@ export const createlocalstorage = (array) => {
      localStorage.setItem('todos', JSON.stringify(array));
    }
 
- export function showTask (){
-    let localStorage = localStorage.getItem("todos");
-    if (localStorage == null) {
-        listArr = [];
-    } else {
-        listArr = JSON.parse(localStorage);
-    }
-    let newlitag = '';
-    listArr.forEach((element, index) => {
-        newlitag += ` <input type="text" name="" data-id="${item.index}" value="${element}">
-            <i id="ellipse" class="fas fa-ellipsis-v m-i"></i>`;
-    });
-    todolist.innerHTML = newlitag;
-    inputBox.Value = '';
-}
-
-
 
 
 
