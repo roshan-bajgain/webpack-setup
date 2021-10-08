@@ -66,14 +66,14 @@ import { each } from 'lodash';
     localStorage.setItem('todos', JSON.stringify(savedata));
     window.location.reload();
   };
-
+ 
   task.forEach((element, index) => {
     const el = element.childNodes[3];
     const deletebtn = element.childNodes[5];
     el.addEventListener('click',() =>{
       deletebtn.style.display = 'block';
       el.style.display = 'none';
-     // listcontainer.style.background = 'rgb(214,213,164)';
+     element.style.background = 'rgb(214,213,164)';
     })
     deletebtn.addEventListener('click',()=>{
       deleteTask(index);
