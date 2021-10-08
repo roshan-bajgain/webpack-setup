@@ -73,6 +73,7 @@ import { each } from 'lodash';
     el.addEventListener('click',() =>{
       deletebtn.style.display = 'block';
       el.style.display = 'none';
+     // listcontainer.style.background = 'rgb(214,213,164)';
     })
     deletebtn.addEventListener('click',()=>{
       deleteTask(index);
@@ -94,11 +95,8 @@ import { each } from 'lodash';
 function edit() {
   const inputs = document.querySelectorAll('.input-text');
   inputs.forEach((input, inputindex) => {
-    console.log(inputindex);
     input.addEventListener('change', (e) =>{
         listArr.filter((obj, objIndex) => {
-          console.log(inputindex);
-          console.log(objIndex);
           if (inputindex === objIndex) {
             obj.description = input.value;
           }
