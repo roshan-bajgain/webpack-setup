@@ -1,4 +1,4 @@
-# webpack-setup
+# To do list
 
 ## Built With
 
@@ -12,7 +12,7 @@
 
 ## Getting Started
 
-**This is my  list structure project**
+**This is my  To do list project**
 
 
 To get a local copy up and running follow these simple example steps.
