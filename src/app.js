@@ -80,7 +80,6 @@ function deletecompleted() {
       obj.index = index + 1;
     });
     localStorage.setItem('todos', JSON.stringify(filteredarray));
-    window.location.reload();
   });
 }
 deletecompleted();
