@@ -2,6 +2,7 @@ import './style.css';
 import {
   createlocalstorage, addBtn, listArr,
 } from './script.js';
+import { addTodoToList } from './add-delete';
 
 const container = document.querySelector('.list-container');
 const deleteallbtn = document.querySelector('.clear');
@@ -42,23 +43,23 @@ const display = (array) => {
   });
 };
 
-addBtn.addEventListener('click', () => {
-  createlocalstorage(listArr);
-  window.location.reload();
-});
-display(listArr);
+// addBtn.addEventListener('click', () => {
+//   createlocalstorage(listArr);
+//   window.location.reload();
+// });
+// display(listArr);
 
 const task = document.querySelectorAll('.task');
 
-function deleteTask(idx) {
-  const storage = JSON.parse(localStorage.getItem('todos'));
-  const savedata = storage.filter((value, index) => index !== idx);
-  savedata.forEach((obj, index) => {
-    obj.index = index + 1;
-  });
-  localStorage.setItem('todos', JSON.stringify(savedata));
-  window.location.reload();
-}
+// function deleteTask(idx) {
+//   const storage = JSON.parse(localStorage.getItem('todos'));
+//   const savedata = storage.filter((value, index) => index !== idx);
+//   savedata.forEach((obj, index) => {
+//     obj.index = index + 1;
+//   });
+//   localStorage.setItem('todos', JSON.stringify(savedata));
+//   window.location.reload();
+// }
 
 task.forEach((element, index) => {
   const el = element.childNodes[3];
