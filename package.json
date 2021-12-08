@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "jsdom": "^19.0.0",
     "locally": "^0.2.1",
     "lodash": "^4.17.21",
     "webpack": "^5.54.0",
