@@ -6,12 +6,15 @@ export function addTodoToList(description, completed = false, id, list) {
 }
 
 
-function deleteTask(idx) {
-  const storage = JSON.parse(localStorage.getItem("todos"));
-  const savedata = storage.filter((value, index) => index !== idx);
-  savedata.forEach((obj, index) => {
-    obj.index = index + 1;
-  });
-  localStorage.setItem("todos", JSON.stringify(savedata));
-  window.location.reload();
+export function deleteTodoList(element) {
+  if (element.classList.contains('show')) {
+    element.children[2].classList.remove('none');
+    element.children[3].classList.remove('show');
+    element.classList.remove('show');
+  } else {
+    element.children[2].classList.add('none');
+    element.children[3].classList.add('show');
+    element.classList.add('show');
+  }
 }
+module.exports = { addTodoToList, deleteTodoList };

@@ -3,6 +3,7 @@ import {
   createlocalstorage, addBtn, listArr,
 } from './script.js';
 import { addTodoToList } from './add-delete';
+import { deleteTodoList } from './add-delete';
 
 const container = document.querySelector('.list-container');
 const deleteallbtn = document.querySelector('.clear');
