@@ -19,7 +19,7 @@ describe("Add to the List Function", () => {
   test("Should have property description", () => {
     expect(list[1]).toHaveProperty("description", "Drink water");
   });
-  test("Should check if completed has a falsy value", () => {
+  test("Should check if completed has a false value", () => {
     expect(list[2].completed).toBeFalsy();
   });
   test("Should check if object contains certain value", () => {
