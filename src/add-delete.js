@@ -1,10 +1,9 @@
 
-
-addBtn.addEventListener("click", () => {
-  createlocalstorage(listArr);
-  window.location.reload();
-});
-display(listArr);
+export function addTodoToList(description, completed = false, id, list) {
+  const todo = { description, completed, id };
+  list.push(todo);
+  return list;
+}
 
 
 function deleteTask(idx) {
