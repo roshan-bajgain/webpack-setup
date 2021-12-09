@@ -1,6 +1,6 @@
 # To do list
 
-<!-- ![screenshot](./image.png) -->
+![screenshot](./image.png)
 
 ## Built With
 
@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://roshan-bajgain.github.io/webpack-setup/)
+[View Live Demo](https://roshan-bajgain.github.io/webpack-setup/)
 
 ## Getting Started
 
