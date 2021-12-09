@@ -9,4 +9,4 @@ function deleteTodoList(element) {
     element.classList.add('show');
   }
 }
-module.exports = { deleteTodoList,getFromStorage,saveToStorage };
+module.exports = { deleteTodoList };

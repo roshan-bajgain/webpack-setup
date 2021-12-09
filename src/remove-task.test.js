@@ -1,4 +1,5 @@
-import { deleteTask } from './app';
+// import { deleteTask } from './app';
+// import { listArr } from './script';
 
 const jsdom = require('jsdom');
 
@@ -19,5 +20,25 @@ test('remove form the dom', () => {
   const element = document.querySelector('.list-container');
   expect(element.children[2].classList.contains('show')).toBe(false);
   expect(element.children[3].classList.contains('show')).toBe(true);
-  // expect(element.children[4].classList.contains('show')).toBe(false);
 });
+
+// describe ('removing list from local storage', ()=>{
+//   const list = [
+//     {
+//       index: 0,
+//       description: 'look outside',
+//       completed: true
+//     },
+//     {
+//       index: 1,
+//       description: 'Add homework',
+//       completed: true,
+//     },
+//   ];
+//   localStorage.setItem('todos', JSON.stringify(list));
+//   test ('test the description',()=> {
+//     deleteTask(1);
+//     const storage = JSON.parse(localStorage.getItem('todos'))
+//     expect(storage).toHaveLength(1);
+//   })
+// })
