@@ -1,4 +1,4 @@
-import { addTodoToList } from './add-delete.js';
+import { addTodoToList } from './__mocks__/add-delete';
 
 const jsdom = require('jsdom');
 
