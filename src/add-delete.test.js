@@ -29,5 +29,3 @@ describe('Add to the List Function', () => {
     expect(list[3].id).toBe(3);
   });
 });
-
-
