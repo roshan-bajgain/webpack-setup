@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Live Demo Link]( https://roshan-bajgain.github.io/webpack-setup/)
+[View Live Demo](https://webpack-todolist.netlify.app/)
 
 ## Getting Started
 
