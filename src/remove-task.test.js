@@ -4,7 +4,7 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
 const dom = new JSDOM(`<!DOCTYPE html><ul class="d-flex todo-lists"></ul>`); // eslint-disable-line
-const document = dom.window.document;
+const { document } = dom.window;
 
 test('remove form the dom', () => {
   document.body.innerHTML = `
