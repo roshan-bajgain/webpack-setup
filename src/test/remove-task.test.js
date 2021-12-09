@@ -1,5 +1,3 @@
-import { deleteTask } from '../app';
-
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
@@ -21,29 +19,3 @@ test('remove form the dom', () => {
   expect(element.children[3].classList.contains('show')).toBe(true);
   // expect(element.children[4].classList.contains('show')).toBe(false);
 });
-
-// import deleteItem from "../mocks/remove-task.js";
-
-// describe("remove a task from the list", () => {
-//   const tasks = [
-//     {
-//       description: "complete",
-//       status: false,
-//       index: "1",
-//     },
-//     {
-//       description: "two",
-//       status: false,
-//       index: "2",
-//     },
-//     {
-//       description: "three",
-//       status: false,
-//       index: "3",
-//     },
-//   ];
-//   test("remove an entry from the todo list", () => {
-//     const todo = tasks[1];
-//     expect(deleteItem(todo, tasks)).toHaveLength(2);
-//   });
-// });
