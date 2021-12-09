@@ -1,4 +1,10 @@
 // import { deleteTodoList } from './remove-task.js';
+const jsdom = require('jsdom');
+
+const { JSDOM } = jsdom;
+
+const dom = new JSDOM(`<!DOCTYPE html><ul class="d-flex todo-lists"></ul>`); // eslint-disable-line
+const document = dom.window.document;
 
 test('remove form the dom', () => {
   document.body.innerHTML = `
