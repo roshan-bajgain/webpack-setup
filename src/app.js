@@ -51,16 +51,6 @@ display(listArr);
 
 const task = document.querySelectorAll('.task');
 
-//  export function deleteTask(idx) {
-//   const storage = JSON.parse(localStorage.getItem('todos'));
-//   const savedata = storage.filter((value, index) => index !== idx);
-//   savedata.forEach((obj, index) => {
-//     obj.index = index + 1;
-//   });
-//   localStorage.setItem('todos', JSON.stringify(savedata));
-//   window.location.reload();
-// }
-
 task.forEach((element, index) => {
   const el = element.childNodes[3];
   const deletebtn = element.childNodes[5];
