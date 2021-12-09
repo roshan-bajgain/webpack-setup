@@ -1,5 +1,6 @@
+import { deleteTask } from '../__mocks__/delete';
 const jsdom = require('jsdom');
-const { default: localStorageMock } = require('../__mocks__/localstorage');
+import localStorage from "../__mocks__/localstorage";
 
 const { JSDOM } = jsdom;
 

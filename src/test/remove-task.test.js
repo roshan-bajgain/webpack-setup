@@ -1,4 +1,4 @@
-import { deleteTask } from './app';
+import { deleteTask } from '../app';
 
 const jsdom = require('jsdom');
 

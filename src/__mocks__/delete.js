@@ -1,4 +1,4 @@
-import localStorageMock from "./localStorage.js";
+import localStorageMock from "../__mocks__/localstorage";
 
 export function deleteTask(idx) {
   const storage = JSON.parse(localStorageMock.getItem("todos"));
@@ -9,3 +9,4 @@ export function deleteTask(idx) {
   localStorageMock.setItem("todos", JSON.stringify(savedata));
   window.location.reload();
 }
+

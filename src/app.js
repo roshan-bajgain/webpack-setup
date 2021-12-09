@@ -2,7 +2,7 @@ import './style.css';
 import {
   createlocalstorage, addBtn, listArr,
 } from './script.js';
-import { deleteTask } from './delete';
+import { deleteTask } from '../src/__mocks__/delete';
 
 const container = document.querySelector('.list-container');
 const deleteallbtn = document.querySelector('.clear');
