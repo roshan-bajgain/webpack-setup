@@ -1,4 +1,5 @@
 const jsdom = require('jsdom');
+const { default: localStorageMock } = require('../__mocks__/localstorage');
 
 const { JSDOM } = jsdom;
 
@@ -20,10 +21,10 @@ describe ('removing list from local storage', ()=>{
         completed: true,
       },
     ];
-    localStorage.setItem('todos', JSON.stringify(list));
+    localStorageMock.setItem('todos', JSON.stringify(list));
     test ('test the description',()=> {
       deleteTask(1);
-      const storage = JSON.parse(localStorage.getItem('todos'))
+      const storage = JSON.parse(localStorageMock.getItem('todos'))
       expect(storage).toHaveLength(1);
     })
   })
