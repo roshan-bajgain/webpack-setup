@@ -7,7 +7,6 @@ const { JSDOM } = jsdom;
 const dom = new JSDOM(`<!DOCTYPE html><ul class="d-flex todo-lists"></ul>`); // eslint-disable-line
 const document = dom.window.document; // eslint-disable-line
 
-
 describe('Add to the List Function', () => {
   const list = [];
   addTodoToList('take a break', false, 0, list);
