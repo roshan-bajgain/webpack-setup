@@ -1,4 +1,5 @@
-// import { deleteTodoList } from './remove-task.js';
+import { deleteTask } from './app';
+
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;

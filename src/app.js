@@ -2,8 +2,6 @@ import './style.css';
 import {
   createlocalstorage, addBtn, listArr,
 } from './script.js';
-// import { addTodoToList, deleteTodoList } from './add-delete';
-// import { deleteTodoList } from './remove-task';
 
 const container = document.querySelector('.list-container');
 const deleteallbtn = document.querySelector('.clear');
@@ -52,7 +50,7 @@ display(listArr);
 
 const task = document.querySelectorAll('.task');
 
-function deleteTask(idx) {
+ export function deleteTask(idx) {
   const storage = JSON.parse(localStorage.getItem('todos'));
   const savedata = storage.filter((value, index) => index !== idx);
   savedata.forEach((obj, index) => {
