@@ -1,5 +1,3 @@
-import localStorageMock from './localStorage.js';
-
 function deleteTodoList(element) {
   if (element.classList.contains('show')) {
     element.children[2].classList.remove('none');
@@ -11,4 +9,4 @@ function deleteTodoList(element) {
     element.classList.add('show');
   }
 }
-module.exports = { deleteTodoList, getFromStorage, saveToStorage };
+module.exports = { deleteTodoList };

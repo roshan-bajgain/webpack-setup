@@ -1,4 +1,4 @@
-import { addTodoToList } from '../add';
+import addTodoToList from '../add.js';
 
 const jsdom = require('jsdom');
 

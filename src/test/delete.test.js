@@ -1,4 +1,4 @@
-import localStorageMock from '../__mocks__/localstorage';
+import localStorageMock from '../__mocks__/localstorage.js';
 
 const jsdom = require('jsdom');
 
@@ -6,7 +6,6 @@ const { JSDOM } = jsdom;
 
 const dom = new JSDOM(`<!DOCTYPE html><ul class="d-flex todo-lists"></ul>`); // eslint-disable-line
 const document = dom.window.document; // eslint-disable-line
-const window = dom.window.document;
 
 const deleteTask = jest.fn((id) => {
   const storage = JSON.parse(localStorageMock.getItem('todos'));
@@ -15,8 +14,7 @@ const deleteTask = jest.fn((id) => {
     obj.index = index + 1;
   });
   localStorageMock.setItem('todos', JSON.stringify(savedata));
-})
-
+});
 
 describe('removing list from local storage', () => {
   const list = [
