@@ -1,6 +1,6 @@
-const jsdom = require("jsdom");
+const jsdom = require('jsdom');
 
-const { checkCompleted } = require("./Others");
+const { checkCompleted } = require('./Others');
 
 const { JSDOM } = jsdom;
 
@@ -34,9 +34,9 @@ const localStorageMock = (() => {
   };
 })();
 
-Object.defineProperty(window, "localStorage", { value: localStorageMock });
+Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
-describe(" checking status completed localstorage", () => {
+describe(' checking status completed localstorage', () => {
   document.body.innerHTML = `
         <li class="list-container d-flex">
           <input type="checkbox" class="checkbox" checked>
@@ -46,39 +46,38 @@ describe(" checking status completed localstorage", () => {
         </li>
         <button class="btn">Clear all Completed</button>
         `;
-  test("function to check the complete statues false", () => {
+  test('function to check the complete statues false', () => {
     const list = localStorageMock;
     // addTodoToList('take a break', false, 0, list);
-    const task = document.querySelector(".items").innerText;
-    const element = document.querySelector(".checkbox");
+    const task = document.querySelector('.items').innerText;
+    const element = document.querySelector('.checkbox');
     const bool = false;
     checkCompleted(list, task, element, bool);
-    const jsonId = "0";
-    const newJson = { completed: "false" };
+    const jsonId = '0';
+    const newJson = { completed: 'false' };
     localStorageMock.setItem(jsonId, newJson);
     // expect(localStorageMock.getItem(jsonId)).toEqual({"data": "json data"});
-    expect(localStorageMock.getItem(jsonId)).toEqual({ completed: "false" });
+    expect(localStorageMock.getItem(jsonId)).toEqual({ completed: 'false' });
   });
 
-  test(" function to check the complete status true", () => {
-    const jsonId = "1";
-    const newJson = { completed: "true" };
+  test(' function to check the complete status true', () => {
+    const jsonId = '1';
+    const newJson = { completed: 'true' };
     localStorageMock.setItem(jsonId, newJson);
-    expect(localStorageMock.getItem(jsonId)).toEqual({ completed: "true" });
+    expect(localStorageMock.getItem(jsonId)).toEqual({ completed: 'true' });
   });
 
-  test("clear all function check", () => {
+  test('clear all function check', () => {
     let list = localStorageMock;
-    const btn = document.querySelector(".btn");
-    btn.addEventListener("click", () => {
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', () => {
       list = [list].filter((item) => item.completed === false);
       expect(list).toBe(0);
     });
   });
-  test("Editing tesk", () => {
-    document.body.innerHTML =
-      ' <p class="items"  contenteditable="true">Hello Todo\'s</p>';
-    const edit = document.querySelector(".items");
+  test('Editing tesk', () => {
+    document.body.innerHTML = ' <p class="items"  contenteditable="true">Hello Todo\'s</p>';
+    const edit = document.querySelector('.items');
     expect(edit.innerHTML).toBe("Hello Todo's");
   });
 });
