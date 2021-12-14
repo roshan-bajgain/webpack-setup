@@ -26,6 +26,10 @@ body {
   justify-content: space-between;
 }
 
+#add-bar {
+  width: 86%;
+}
+
 input,
 button {
   border-style: hidden;
