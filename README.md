@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[View Live Demo](https://webpack-todolist.netlify.app/)
+[View Live Demo](https://angry-haibt-23f130.netlify.app)
 
 ## Getting Started
 
